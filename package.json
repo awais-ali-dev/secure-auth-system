@@ -1,0 +1,28 @@
+{
+  "name": "secure-auth-system",
+  "version": "1.0.0",
+  "description": "Secure user authentication system with OAuth 2.0 (Google), TOTP 2FA (Google Authenticator), and AES-256 encryption for sensitive data.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite server.js",
+    "dev": "nodemon --experimental-sqlite server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^6.0.1",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "qrcode": "^1.5.4",
+    "speakeasy": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

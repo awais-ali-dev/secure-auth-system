@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verify 2FA</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Enter your 2FA code</h1>
+    <p>Open Google Authenticator and enter the current 6-digit code.</p>
+    <form method="POST" action="/2fa/verify">
+      <input type="text" name="token" placeholder="6-digit code" required maxlength="6" pattern="[0-9]{6}">
+      <button type="submit" class="btn">Verify</button>
+    </form>
+  </div>
+</body>
+</html>

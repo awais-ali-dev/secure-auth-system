@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Welcome, <%= user.display_name %></h1>
+    <p>Email (decrypted for display only): <strong><%= email %></strong></p>
+    <p>2FA status:
+      <strong><%= user.two_factor_enabled ? 'Enabled ✅' : 'Not enabled ⚠️' %></strong>
+    </p>
+    <% if (!user.two_factor_enabled) { %>
+      <a class="btn" href="/2fa/setup">Enable Two-Factor Authentication</a>
+    <% } %>
+    <br><br>
+    <a href="/logout">Log out</a>
+  </div>
+</body>
+</html>

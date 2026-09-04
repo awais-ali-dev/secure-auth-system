@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Set up 2FA</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Set up Two-Factor Authentication</h1>
+    <p>Scan this QR code with Google Authenticator (or any TOTP app):</p>
+    <img src="<%= qrCodeDataUrl %>" alt="2FA QR code" />
+    <form method="POST" action="/2fa/setup">
+      <input type="text" name="token" placeholder="Enter 6-digit code" required maxlength="6" pattern="[0-9]{6}">
+      <button type="submit" class="btn">Confirm & Enable 2FA</button>
+    </form>
+  </div>
+</body>
+</html>
